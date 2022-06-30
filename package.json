@@ -7,6 +7,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "jest --watchAll",
+    "test:e2e": "cypress run",
     "cypress:open": "cypress open"
   },
   "dependencies": {
