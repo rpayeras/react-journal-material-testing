@@ -1,4 +1,4 @@
-const testUser = {
+export const testUser = {
   uid: 'ABC123',
   email: 'test@mail.com',
   displayName: 'Test user',
