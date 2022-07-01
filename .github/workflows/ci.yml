@@ -1,9 +1,15 @@
+name: First workflow
+
 on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
 
+    name: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
 
@@ -16,3 +22,6 @@ jobs:
         run: |
           echo "Job context: $JOB_CONTEXT"
           echo "Done!"
+      - name: Greeting if Windows
+        if: matrix.os == 'windows-latest'
+        run: echo "Hey from win2!"
