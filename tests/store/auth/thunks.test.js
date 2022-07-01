@@ -1,10 +1,10 @@
-import { loginWithEmailPassword, singInWithGoogle } from "../../../src/firebase/providers"
-import { checkingAuthentication, checkingCredentials, login, logout, startGoogleSignIn, startLoginWithEmailPassword, startLogout } from "../../../src/store/auth"
-import { clearNotesLogout } from "../../../src/store/journal"
-import { testUser } from "../../fixtures/authFixtures"
+import { loginWithEmailPassword, singInWithGoogle } from '../../../src/firebase/providers'
+import { checkingAuthentication, checkingCredentials, login, logout, startGoogleSignIn, startLoginWithEmailPassword, startLogout } from '../../../src/store/auth'
+import { clearNotesLogout } from '../../../src/store/journal'
+import { testUser } from '../../fixtures/authFixtures'
 
-jest.mock("../../../src/firebase/providers")
-jest.mock("@firebase/auth")
+jest.mock('../../../src/firebase/providers')
+jest.mock('@firebase/auth')
 
 describe('authThunks tests', () => {
   const dispatch = jest.fn()
@@ -69,4 +69,3 @@ describe('authThunks tests', () => {
     expect(dispatch).toHaveBeenCalledWith(logout())
   })
 })
-

@@ -1,6 +1,6 @@
-import { readFile } from "fs/promises"
-import path from "path"
-import { fileUpload } from "../../src/helpers/fileUpload"
+import { readFile } from 'fs/promises'
+import path from 'path'
+import { fileUpload } from '../../src/helpers/fileUpload'
 
 import { v2 as cloudinary } from 'cloudinary'
 

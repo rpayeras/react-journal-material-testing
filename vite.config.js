@@ -9,10 +9,10 @@ export default defineConfig(({ mode }) => {
     (prev, [key, val]) => {
       return {
         ...prev,
-        ['process.env.' + key]: `"${val}"`,
+        ['process.env.' + key]: `"${val}"`
       }
     },
-    {},
+    {}
   )
 
   return {

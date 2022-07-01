@@ -1,5 +1,5 @@
-import { authSlice, checkingCredentials, login, logout } from "../../../src/store/auth/authSlice"
-import { initialState, testUser } from "../../fixtures/authFixtures"
+import { authSlice, checkingCredentials, login, logout } from '../../../src/store/auth/authSlice'
+import { initialState, testUser } from '../../fixtures/authFixtures'
 
 describe('Testing authSlice', () => {
   test('should return initial state', () => {
@@ -29,7 +29,7 @@ describe('Testing authSlice', () => {
       email: null,
       displayName: null,
       photoURL: null,
-      errorMessage: undefined,
+      errorMessage: undefined
     })
   })
 

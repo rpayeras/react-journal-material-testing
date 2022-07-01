@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore/lite';
+import { initializeApp } from 'firebase/app'
+import { getAuth } from 'firebase/auth'
+import { getFirestore } from 'firebase/firestore/lite'
 
 const {
   VITE_FIREBASE_API_KEY,
@@ -22,9 +22,9 @@ const firebaseConfig = {
   storageBucket: VITE_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: VITE_FIREBASE_MESSAGING_SENDER_ID,
   appId: VITE_FIREBASE_APP_ID
-};
+}
 
 // Initialize Firebase
-export const FirebaseApp = initializeApp(firebaseConfig);
-export const FirebaseAuth = getAuth(FirebaseApp);
-export const FirebaseDB = getFirestore(FirebaseApp);
+export const FirebaseApp = initializeApp(firebaseConfig)
+export const FirebaseAuth = getAuth(FirebaseApp)
+export const FirebaseDB = getFirestore(FirebaseApp)

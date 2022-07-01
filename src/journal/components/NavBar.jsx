@@ -1,24 +1,21 @@
-import { useDispatch } from 'react-redux';
-import { AppBar, Grid, IconButton, Toolbar, Typography } from '@mui/material';
-import { LogoutOutlined, MenuOutlined } from '@mui/icons-material';
-import { startLogout } from '../../store/auth';
-
+import { useDispatch } from 'react-redux'
+import { AppBar, Grid, IconButton, Toolbar, Typography } from '@mui/material'
+import { LogoutOutlined, MenuOutlined } from '@mui/icons-material'
+import { startLogout } from '../../store/auth'
 
 export const NavBar = ({ drawerWidth = 240 }) => {
+  const dispatch = useDispatch()
 
-    const dispatch = useDispatch();
+  const onLogout = () => {
+    dispatch(startLogout())
+  }
 
-    const onLogout = () => {
-        dispatch(startLogout());
-    }
-
-
-    return (
+  return (
         <AppBar
             position='fixed'
             sx={{
-                width: { sm: `calc(100% - ${drawerWidth}px)` },
-                ml: { sm: `${drawerWidth}px` }
+              width: { sm: `calc(100% - ${drawerWidth}px)` },
+              ml: { sm: `${drawerWidth}px` }
             }}
         >
             <Toolbar>
@@ -44,5 +41,5 @@ export const NavBar = ({ drawerWidth = 240 }) => {
 
             </Toolbar>
         </AppBar>
-    )
+  )
 }

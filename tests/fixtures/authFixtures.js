@@ -2,7 +2,7 @@ export const testUser = {
   uid: 'ABC123',
   email: 'test@mail.com',
   displayName: 'Test user',
-  photoURL: 'https://test.jpg',
+  photoURL: 'https://test.jpg'
 }
 
 export const initialState = {
@@ -11,13 +11,13 @@ export const initialState = {
   email: null,
   displayName: null,
   photoURL: null,
-  errorMessage: null,
+  errorMessage: null
 }
 
 export const authenticatedState = {
   status: 'authenticated',
   ...testUser,
-  errorMessage: null,
+  errorMessage: null
 }
 
 export const notAuthenticatedState = {
@@ -26,6 +26,5 @@ export const notAuthenticatedState = {
   email: null,
   displayName: null,
   photoURL: null,
-  errorMessage: null,
+  errorMessage: null
 }
-

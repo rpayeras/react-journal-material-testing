@@ -5,7 +5,7 @@ describe('Todo app', () => {
 
   it('should enter on page', () => {
     cy.contains('Login')
-  });
+  })
 
   // it('should allow to create an user', () => {
   //   cy.contains('Crear una cuenta').click()
